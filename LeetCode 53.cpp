@@ -1,4 +1,5 @@
 // LeetCode - 53. Maximum Subarray
+// Kadane Algorithm
 
 // class Solution {
 // public:

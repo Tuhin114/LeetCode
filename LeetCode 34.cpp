@@ -40,3 +40,38 @@
 //         return {firstOcc(nums , target) , lastOcc(nums , target)};
 //     }
 // };
+
+// Optimal Approach & small code
+/**
+ class Solution {
+private:
+    vector<int>solve(int mid, vector<int> &nums, int target){
+        int low = mid , high = mid;
+
+        while(low >= 0 && nums[low] == target){
+            low--;
+        }
+        while(high < nums.size() && nums[high] == target){
+            high++;
+        }
+        return {low + 1, high - 1};
+    }
+public:
+    vector<int> searchRange(vector<int>& nums, int target) {
+        int i = 0;
+        int j = nums.size() - 1;
+
+        while(i <= j){
+            int mid = i + (j - i)/2;
+            if(nums[mid] == target){
+                return solve(mid, nums, target);
+            }else if(nums[mid] > target){
+                j = mid - 1;
+            }else{
+                i = mid + 1;
+            }
+        }
+        return {-1, -1};
+    }
+};
+*/

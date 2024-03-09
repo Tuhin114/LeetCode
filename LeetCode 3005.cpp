@@ -34,3 +34,49 @@ public:
     }
 };
 */
+
+// Better Solution(2 pass solution, O(n))
+/**
+ class Solution {
+public:
+    int maxFrequencyElements(vector<int>& nums) {
+        vector<int> arr(101);
+        int maxFreq = 0;
+
+        for(int i = 0; i < nums.size(); i++){
+            int num = nums[i];
+            arr[num]++;
+            maxFreq = max(maxFreq, arr[num]);
+        }
+
+        return count(arr.begin(), arr.end(), maxFreq)*maxFreq;
+    }
+};
+*/
+
+// Better Solution(1 pass solution)
+/**
+ class Solution {
+public:
+    int maxFrequencyElements(vector<int>& nums) {
+        vector<int> arr(101);
+        int maxFreq = 0;
+        int total = 0;
+
+        for(int i = 0; i < nums.size(); i++){
+            int num = nums[i];
+            arr[num]++;
+
+            int freq = arr[num];
+
+            if(freq > maxFreq){
+                maxFreq = freq;
+                total = freq;
+            }else if(maxFreq == freq){
+                total += freq;
+            }
+        }
+        return total;
+    }
+};
+*/

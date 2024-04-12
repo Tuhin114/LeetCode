@@ -1,4 +1,5 @@
 // LeetCode 950. Reveal Cards In Increasing Order
+// https://youtu.be/S6MGVmkMz2c?si=dZwzRBDzut7KVRj5
 
 // Approach - 1
 /**

@@ -1,6 +1,5 @@
 // LeetCode 2487. Remove Nodes From Linked List
-// https://leetcode.com/problems/remove-nodes-from-linked-list/description/?envType=daily-question&envId=2024-05-06
-
+// https://youtu.be/RTVG66xulcA?si=U0pqVNIQ7T3y_khb
 // Approach - 1(stack)
 /**
 

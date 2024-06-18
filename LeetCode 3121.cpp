@@ -24,3 +24,42 @@ public:
     }
 };
 */
+
+// Approach 2
+/**
+ class Solution {
+public:
+    int numberOfSpecialChars(string word) {
+        int hashCap[26] = {0};
+        int hashSma[26] = {0};
+        int hashCapFreq[26];
+        int hashSmaFreq[26];
+
+        fill_n(hashCapFreq, 26, -1); // Initialize with -1 indicating no occurrence
+        fill_n(hashSmaFreq, 26, -1);
+
+
+        for(int i = 0; i < word.length(); i++){
+            char ch = word[i];
+
+            if((ch - 'A') < 26){
+                hashCap[ch - 'A']++;
+                if(hashCapFreq[ch - 'A'] == -1){
+                    hashCapFreq[ch - 'A'] = i;
+                }
+            }else{
+                hashSma[ch - 'a']++;
+                hashSmaFreq[ch - 'a'] = i;
+            }
+        }
+
+        int count = 0;
+
+        for(int i = 0; i < 26; i++){
+            if(hashSma[i] >= 1 && hashCap[i] >= 1 && hashCapFreq[i] > hashSmaFreq[i])  count++;
+        }
+
+        return count;
+    }
+};
+ */

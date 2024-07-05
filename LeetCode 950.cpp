@@ -1,5 +1,6 @@
 // LeetCode 950. Reveal Cards In Increasing Order
 // https://youtu.be/S6MGVmkMz2c?si=dZwzRBDzut7KVRj5
+// https://github.com/MAZHARMIK/Interview_DS_Algo/blob/master/iPad%20PDF%20Notes/Leetcode-950-Reveal%20Cards%20In%20Increasing%20Order.pdf
 
 // Approach - 1
 /**
